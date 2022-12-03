@@ -1,0 +1,32 @@
+{% include "header.html" %}
+        <h1>Your past orders</h1>
+        {% if orders is defined %}
+            {% for order in orders %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="100">Name</th>
+                            <th width="100">Quantity</th>
+                            <th width="100">Subtotal</th>
+                        </tr>
+                    </thead>
+                    {% set total = {'value': 0} %}
+                    {% for item in order["details"]%}
+                        <tr>
+                            <td>{{ item["name"] }}</td>
+                            <td>{{ item["qty"] }}</td>
+                            <td>{{ item["subtotal"] }}</td>
+                            {% if total.update({"value": item["subtotal"]|int + total.value|int }) %} {% endif %}
+                        </tr>
+                        <br>
+                    {% endfor %}
+                    <tr>
+                        <td colspan=2>Total</td>
+                        <td><b>{{total.value}}</b></td>
+                    </tr>
+                </table>
+            {% endfor %}
+        {% else %}
+            <p> No orders have been made yet. <a href="/products">Back to product list</a></p>
+        {% endif %}
+{% include "footer.html" %}

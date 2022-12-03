@@ -1,0 +1,24 @@
+<html>
+  <header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <style>
+      .footer {
+        font-size:10px;
+      }
+    </style>
+  </header>
+  <body>
+    <a href='/'>Home</a> | <a href='/products'>Products</a> |
+        <a href='/branches'>Branches</a> | <a href='/aboutus'>About Us</a> |
+        {% if session["user"] is defined %}
+        Welcome, {{ session["user"]["first_name"] }}.
+        <a href='/cart'>View Cart</a> |
+        <a href='/pastorders'>View Past Orders</a> |
+        <a href='/changepassword'>Update Password</a> |
+        <a href='/logout'>Logout</a>
+        {% else %}
+        <a href='/login'>Login</a>
+        {% endif %}
+        <p/>
+
+
