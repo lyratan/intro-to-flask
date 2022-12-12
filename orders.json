@@ -1,4 +1,0 @@
-{"_id":{"$oid":"638b576abca0478deba05033"},"username":"joben@example.com","orderdate":{"$date":"2022-12-03T14:04:26.949Z"},"details":[{"code":"100","name":"Americano","qty":2,"subtotal":300.0}]}
-{"_id":{"$oid":"638b63354a538b0c3b822ee5"},"username":"joben@example.com","orderdate":{"$date":"2022-12-03T14:54:45.965Z"},"details":[{"code":"100","name":"Americano","qty":1,"subtotal":150.0}]}
-{"_id":{"$oid":"638b64d91a6f1bdd28cabad2"},"username":"joben@example.com","orderdate":{"$date":"2022-12-03T15:01:45.652Z"},"details":[{"code":"100","name":"Americano","qty":1,"subtotal":150.0}]}
-{"_id":{"$oid":"638b65ecba16f612a2c0136a"},"username":"joben@example.com","orderdate":{"$date":"2022-12-03T15:06:20.304Z"},"details":[{"code":"100","name":"Americano","qty":2,"subtotal":300.0}]}
